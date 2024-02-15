@@ -82,7 +82,7 @@ jobs:
          if [ "${{ github.event.inputs.BUILD_DIFFERENT_ROM }}" != "echo "Build Starting!"" ]; then
                   ${{ github.event.inputs.BUILD_DIFFERENT_ROM }}
                   git clone ${{ github.event.inputs.LOCAL_MANIFEST }} --depth 1 -b ${{ github.event.inputs.LOCAL_MANIFEST_BRANCH }} .repo/local_manifests && \
-                  timeout 2m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
+                  timeout 1m repo sync || true
           else
                   ${{ github.event.inputs.BUILD_DIFFERENT_ROM }}
           fi
