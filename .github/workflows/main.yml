@@ -80,7 +80,6 @@ jobs:
     - name: Test Local Manifests
       run: |
          if [ "${{ github.event.inputs.BUILD_DIFFERENT_ROM }}" == "echo 'Build Starting!'" ]; then
-                  ${{ github.event.inputs.BUILD_DIFFERENT_ROM }}
                   case "${{ github.event.inputs.BASE_PROJECT }}" in
                   "ArrowOS 13.1")
                     repo init -u https://github.com/ArrowOS/android_manifest.git -b arrow-13.1 --depth=1
