@@ -16,7 +16,7 @@ on:
       BUILD_DIFFERENT_ROM:
         description: 'Replace with Repo Init Command'
         required: false
-        default: "echo 'Build Starting!'"
+        default: 'echo 'Build Starting!''
       REMOVALS:
         description: 'Folders to Remove Before Syncing'
         default: '.repo/local_manifests'
