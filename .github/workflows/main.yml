@@ -111,9 +111,10 @@ jobs:
             esac
            else
                     ${{ github.event.inputs.BUILD_DIFFERENT_ROM }}
-                    git clone ${{ github.event.inputs.LOCAL_MANIFEST }} --depth 1 -b ${{ github.event.inputs.LOCAL_MANIFEST_BRANCH }} .repo/local_manifests && \
-                    timeout 2m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
+                    
             fi
+            git clone ${{ github.event.inputs.LOCAL_MANIFEST }} --depth 1 -b ${{ github.event.inputs.LOCAL_MANIFEST_BRANCH }} .repo/local_manifests && \
+            timeout 2m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
       timeout-minutes: 10
       # Initialize the previously choosen 'repo' project.
     - name: Configure the 'repo' environment
