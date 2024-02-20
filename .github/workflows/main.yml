@@ -156,7 +156,7 @@ jobs:
         # Set up build environment
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
-        export DERP_MAINTAINER=Ʀᴀ㉿ɪƁ ; \
+        export MATRIXX_MAINTAINER=Ʀᴀ㉿ɪƁ ; \
         . build/envsetup.sh && \
 
         # Build the ROM
