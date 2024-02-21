@@ -156,8 +156,8 @@ jobs:
         # Set up build environment
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
-        #export AFTERLIFE_MAINTAINER=nll ; \
-        . build/envsetup.sh && \
+        export AFTERLIFE_MAINTAINER=Ʀᴀ㉿ɪƁ ; \
+        source build/envsetup.sh && \
 
         # Build the ROM
         lunch ${{ github.event.inputs.PRODUCT_NAME }}-${{ github.event.inputs.BUILD_TYPE }} && \
